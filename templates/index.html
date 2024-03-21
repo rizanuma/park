@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parkinson's Diseases Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="content">
+        <h1>Parkinson's Diseases Prediction</h1>
+        <!--<div class="flex-form">-->
+            <form action="/predict" method="POST">
+                <input type="float" name="mdvp_fo" id="mdvp_fo" placeholder="MDVP:Fo(Hz) range(88,260)">
+                <input type="float" name="mdvp_shim" id="mdvp_shim" placeholder="MDVP:Shimmer range(0.009, 0.12)">
+                <input type="float" name="nhr" id="nhr" placeholder="NHR range(0.0006, 0.31)">
+                <input type="float" name="hnr" id="hnr" placeholder="HNR range(8, 33)">
+                <input type="float" name="rpde" id="rpde" placeholder="RPDE range(0.25, 0.68)">
+                <input type="float" name="dfa" id="dfa" placeholder="DFA range(0.57, 0.82)">
+                <input type="float" name="spread1" id="spread1" placeholder="Spread1 range(-7, -2)">
+                <input type="float" name="ppe" id="ppe" placeholder="PPE range(0.04, 0.5)">
+                
+                <button type="submit" value="Predict">Predict</button>
+            </form>
+        <!--</div>-->
+    </div>
+</body>
+</html>
